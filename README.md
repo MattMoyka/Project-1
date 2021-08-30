@@ -1,4 +1,4 @@
-# Project-1
+# Project Luna
 # Project Overview
 
 ## Project Name
