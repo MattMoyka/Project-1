@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <script defer="" src="script.js" charset="utf-8"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>Document</title>
 </head>
 
@@ -24,7 +25,15 @@
       </ul>
     </div>
   </div>
-  <div class="weather">weather</div>
+  <div class="weather">
+    <form class="search-section">
+      <input type="text" id="searchZip" placeholder="Enter Zip-Code">
+      <button id="searchZipButton">Search</button>
+    </form>
+    <section class="weather_data">
+
+    </section>
+  </div>
   <div class="news">news</div>
   <div class="random">random</div>
   <div class="timer">timer</div>

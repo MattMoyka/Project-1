@@ -13,8 +13,8 @@ a personal assistant/homepage. Something like jarvis, alexa, cortana, siri. cust
 
 1. Pixabay 
   https://pixabay.com/api/?key=19064857-44bbc586b3072fe33eaf1d02e&q=yellow+flowers&image_type=photo&pretty=true
-2. tomorrow api 
-https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=QYorGBSBf5BB5ZlDzXigvdQveGeipwvF
+2. weather api
+http://api.weatherapi.com/v1/forecast.json?key=2d30ac272187439b8e1183146213008&q=10001&days=1&aqi=no&alerts=no
 3. NewsApi 
 https://newsapi.org/v2/everything?q=bitcoin&apiKey=1941ec12d2054d399f9949a853bd47b6
 
