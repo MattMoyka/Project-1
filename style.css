@@ -74,12 +74,7 @@ padding: 5px;
   padding: 10px;
 }
 
-.widget:hover {
-  transition: .2s ease-in-out;
-  transform: scale(1.2);
-  cursor: crosshair;
-  z-index: 1;
-}
+
 
 .inputcss {
   background: lightblue;

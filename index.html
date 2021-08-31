@@ -9,6 +9,10 @@
   <script defer="" src="script.js" charset="utf-8"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="duckhunt.css" />
 </head>
 
 <body class="container">
@@ -44,7 +48,11 @@
 
     </section>
   </div>
-  <div class="random widget">random</div>
+  <div class="random">
+
+    <script src="duckhunt.js"></script>
+    <button id="playGame" onclick="playGame()">Play Game</button>
+  </div>
   <div class="timer widget">
     <form class="timer-input">
       <input class="inputcss" type="text" id="time" placeholder="Enter time in minutes">
