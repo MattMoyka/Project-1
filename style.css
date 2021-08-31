@@ -5,14 +5,33 @@ html {
   width: 100%;
   height: 100%;
 }
+body {
+  background: linear-gradient(-45deg, #e3e341, rgb(156, 68, 156), #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: breathe 10s ease infinite;
+  padding: 30px;
+}
+
+@keyframes breathe {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
 .container {
   display: grid;
   height: 100%;
   grid-template-columns: 25% auto 25%;
-  grid-template-rows: 25% auto 25%;
+  grid-template-rows: 50% 50%;
+  gap: 20px;
   grid-template-areas: 
   "header-left main header-right"
-  ". main ."
   "footer-left main footer-right";
 }
 .weather {
@@ -29,4 +48,40 @@ html {
 }
 .to-do {
   grid-area: main;
+  text-align: center;
+  font-family: 'Play', sans-serif;
+  box-shadow: 10px 5px 5px rgb(4, 52, 36);
+  background: mediumaquamarine;
+  border-radius: 50px;
+}
+
+.todoItem {
+color: white;
+text-align: left;
+padding: 5px;
+}
+
+.completedButton {
+  float: right;
+  border-radius: 50px;
+  background: mediumaquamarine;
+}
+
+.widget {
+  background: mediumaquamarine;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgb(4, 52, 36);
+  padding: 10px;
+}
+
+.widget:hover {
+  transition: .2s ease-in-out;
+  transform: scale(1.2);
+  cursor: crosshair;
+  z-index: 1;
+}
+
+.inputcss {
+  background: lightblue;
+
 }
