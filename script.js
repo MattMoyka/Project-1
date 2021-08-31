@@ -106,6 +106,7 @@ let News_Api = `https://newsapi.org/v2/everything?q=${NEWS_SEARCH}&from=2021-08-
 let searchNewsButton = document.querySelector('#searchNewsButton');
 let newsDiv = document.querySelector('.news_article');
 let searchNews = document.querySelector('#searchNews');
+let linkImgA = document.querySelector('a');
 
 searchNewsButton.addEventListener('click', (event) => {
   event.preventDefault();
@@ -122,9 +123,72 @@ async function getNews() {
     let newsData = await axios.get(News_Api);
     let newsArticleData = newsData.data.articles;
     console.log(newsArticleData);
+    let randArticle = Math.floor(Math.random() * (newsArticleData.length - 1));
+
+    let newsTitle = document.createElement('div');
+    newsTitle.classList.add('newsTitle');
+    newsTitle.innerText = newsArticleData[randArticle].title;
+    newsDiv.appendChild(newsTitle);
+
+
+    let newsImg = document.createElement('img');
+    newsImg.classList.add('newsImg');
+    newsImg.src = newsArticleData[randArticle].urlToImage;
+    newsImg.style.width = '100%';
+    newsImg.style.height = '100%';
+
+    let linkImg = document.createElement('a');
+    linkImg.href = newsArticleData[randArticle].url;
+    linkImg.target = "_blank";
+    linkImg.appendChild(newsImg);
+    newsDiv.appendChild(linkImg);
+
+
 
     //figure out how to display articles
   } catch (error) {
     console.log(error);
   };
 };
+
+//==================================================================================
+//Timer
+let display = document.querySelector('.countdown');
+let timeInput = document.querySelector('#time');
+let timeButton = document.querySelector('#timeButton');
+let time;
+
+timeButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  time = timeInput.value * 60;
+  timer(time);
+})
+
+let timeButtonEnd = document.querySelector('#timeButtonEnd');
+timeButtonEnd.addEventListener('click', (event) => {
+  event.preventDefault();
+  time = 0;
+})
+
+let timer = (time) => {
+  let minute = Math.floor(time / 60);
+  let second = time - (minute * 60);
+  Math.floor(second);
+  //format seconds numbering, less than 10
+  if (second < 10) {
+    second = "0" + second;
+  }
+
+  let timerDisplayInfo = minute.toString() + ":" + second;
+  display.innerHTML = timerDisplayInfo;
+  time -= 1;
+  console.log(time);
+  if (time === 0) {
+    alert("Done");
+  } else {
+    setTimeout(function () { timer(time) }, 1000);
+  }
+};
+
+//==================================================================================
+
