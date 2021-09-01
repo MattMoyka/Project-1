@@ -29,7 +29,8 @@ let addItem = () => {
     completedButton.setAttribute('id', index);
     completedButton.innerText = 'Completed';
     completedButton.addEventListener('click', (index) => {
-      todoListArr.splice(index, 1);
+      console.log(index.target.id);
+      todoListArr.splice(index.target.id, 1);
       console.log(todoListArr);
       addItem();
     })
@@ -123,7 +124,15 @@ async function getNews() {
     let newsArticleData = newsData.data.articles;
     console.log(newsArticleData);
 
-    for (let i = 0; i < 4; i++) {
+    let i;
+    let media = window.matchMedia("(min-width: 800px")
+    if (media.matches) {
+      i = 0;
+    } else {
+      i = 2;
+    }
+
+    for (i; i < 3; i++) {
       let randArticle = Math.floor(Math.random() * (newsArticleData.length - 1));
       let newsTitle = document.createElement('div');
       newsTitle.classList.add('newsTitle');
@@ -159,6 +168,7 @@ let display = document.querySelector('.countdown');
 let timeInput = document.querySelector('#time');
 let timeButton = document.querySelector('#timeButton');
 let time;
+let timeOut;
 
 timeButton.addEventListener('click', (event) => {
   event.preventDefault();
@@ -169,7 +179,9 @@ timeButton.addEventListener('click', (event) => {
 let timeButtonEnd = document.querySelector('#timeButtonEnd');
 timeButtonEnd.addEventListener('click', (event) => {
   event.preventDefault();
+  window.clearTimeout(timeOut);
   time = 0;
+  display.innerHTML = time;
 })
 
 let timer = (time) => {
@@ -188,9 +200,10 @@ let timer = (time) => {
   if (time === 0) {
     alert("Done");
   } else {
-    setTimeout(function () { timer(time) }, 1000);
+    timeOut = setTimeout(function () { timer(time) }, 1000);
   }
 };
 
 //==================================================================================
+
 

@@ -16,11 +16,11 @@
 </head>
 
 <body class="container">
-  <div class="to-do">
+  <div class="to-do widget">
     <h2>To Do List</h2>
     <form>
-      <input type="text" id="task" name="task" placeholder="Enter task">
-      <input type="submit" id="submit-task" value="Submit">
+      <input class="inputcss" type="text" id="task" name="task" placeholder="Enter task">
+      <button type="submit" id="submit-task">Submit</button>
     </form>
     <div class="todo-list">
       <ul id="todo-ul">
@@ -52,7 +52,8 @@
   <div class="random">
 
     <script src="duckhunt.js"></script>
-    <button id="playGame" onclick="playGame()">Play Game</button>
+
+    <div id="buttonBackground"><button id="playGame" onclick="playGame()">Play Game</button></div>
   </div>
   <div class="timer widget">
     <h2>Task Timer</h2>
