@@ -6,13 +6,13 @@ html {
   height: 100%;
 }
 body {
-  background: linear-gradient(-45deg, #e3e341, rgb(156, 68, 156), #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: breathe 10s ease infinite;
+  background: linear-gradient(45deg, #3a1c71, #d76d77, #ffaf7b);
+  background-size: 300%;
+  animation: motion 10s ease infinite;
   padding: 30px;
 }
 
-@keyframes breathe {
+@keyframes motion {
   0% {
       background-position: 0% 50%;
   }
@@ -38,8 +38,15 @@ body {
   grid-area: header-left;
 }
 .news {
-  grid-area: footer-left;
+  grid-area: main;
+  padding: 10 px;
+  /* display: flex; */
 }
+.newsImg {
+height: 100px;
+  width: auto;
+}
+
 .random {
   grid-area: header-right;
 }
@@ -47,12 +54,13 @@ body {
   grid-area: footer-right;
 }
 .to-do {
-  grid-area: main;
+  grid-area: footer-left
   text-align: center;
   font-family: 'Play', sans-serif;
   box-shadow: 10px 5px 5px rgb(4, 52, 36);
   background: mediumaquamarine;
-  border-radius: 50px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .todoItem {
@@ -72,11 +80,20 @@ padding: 5px;
   border-radius: 10px;
   box-shadow: 10px 5px 5px rgb(4, 52, 36);
   padding: 10px;
+  font-family: 'Play', sans-serif;
 }
-
-
 
 .inputcss {
   background: lightblue;
 
+}
+
+#task {
+  width: 50%;
+}
+#time {
+  width: 50%;
+}
+#searchZip{
+  width: 50%;
 }

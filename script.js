@@ -122,26 +122,29 @@ async function getNews() {
     let newsData = await axios.get(News_Api);
     let newsArticleData = newsData.data.articles;
     console.log(newsArticleData);
-    let randArticle = Math.floor(Math.random() * (newsArticleData.length - 1));
 
-    let newsTitle = document.createElement('div');
-    newsTitle.classList.add('newsTitle');
-    newsTitle.innerText = newsArticleData[randArticle].title;
-    newsDiv.appendChild(newsTitle);
+    for (let i = 0; i < 4; i++) {
+      let randArticle = Math.floor(Math.random() * (newsArticleData.length - 1));
+      let newsTitle = document.createElement('div');
+      newsTitle.classList.add('newsTitle');
+      newsTitle.innerText = newsArticleData[randArticle].title;
+
+      let newsImg = document.createElement('img');
+      newsImg.classList.add('newsImg');
+      newsImg.src = newsArticleData[randArticle].urlToImage;
 
 
-    let newsImg = document.createElement('img');
-    newsImg.classList.add('newsImg');
-    newsImg.src = newsArticleData[randArticle].urlToImage;
-    newsImg.style.width = '100%';
-    newsImg.style.height = '100%';
+      let linkImg = document.createElement('a');
+      linkImg.href = newsArticleData[randArticle].url;
+      linkImg.target = "_blank";
+      linkImg.appendChild(newsImg);
 
-    let linkImg = document.createElement('a');
-    linkImg.href = newsArticleData[randArticle].url;
-    linkImg.target = "_blank";
-    linkImg.appendChild(newsImg);
-    newsDiv.appendChild(linkImg);
-
+      let newsContainer = document.createElement('div');
+      newsContainer.classList.add('newsContainer');
+      newsContainer.appendChild(newsTitle)
+      newsContainer.appendChild(linkImg);
+      newsDiv.appendChild(newsContainer);
+    }
 
 
     //figure out how to display articles
