@@ -7,9 +7,11 @@ html {
 }
 body {
   background: linear-gradient(45deg, #3a1c71, #d76d77, #ffaf7b);
-  background-size: 300%;
-  animation: motion 10s ease infinite;
+  background-size: 500%; 
   padding: 30px;
+  animation: motion 10s ease infinite;
+
+
 }
 
 @keyframes motion {
@@ -26,11 +28,12 @@ body {
 
 .weather {
   grid-area: header-left;
+  padding: 10px;
 }
 .news {
   grid-area: main;
-  padding: 10 px;
-  /* display: flex; */
+
+  
 }
 .newsImg {
 height: 100px;
@@ -39,9 +42,11 @@ height: 100px;
 
 .random {
   grid-area: header-right;
+
 }
 .timer {
   grid-area: footer-right;
+  padding: 10px;
 }
 .to-do {
   grid-area: footer-left
@@ -82,7 +87,7 @@ padding: 5px;
   "header-left header-right"
   "footer-left footer-right ";
 }
-}
+
 
 #task {
   width: 80%;
@@ -92,6 +97,13 @@ padding: 5px;
 }
 #searchZip{
   width: 80%;
+}
+#searchNews {
+  width: 50%;
+  margin: 0 0 0 10px;
+}
+#newsHeader {
+  padding: 10px;
 }
 
 h2 {
@@ -106,24 +118,31 @@ h2 {
   font-family: 'Play', sans-serif;
 }
 
-@media screen and (min-width: 500px) {
+h1 {
+  text-align: center;
+  background: black;
+  color: white;
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+  padding: 5px;
+}
+@media screen and (min-width: 800px) {
   .widget {
     background: mediumaquamarine;
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgb(4, 52, 36);
-    padding: 10px;
     font-family: 'Play', sans-serif;
   }
   
   
   #task {
-    width: 50%;
+    width: 80%;
   }
   #time {
-    width: 50%;
+    width: 80%;
   }
   #searchZip{
-    width: 50%;
+    width: 80%;
   }
   
   
