@@ -20,7 +20,7 @@
     <h2>To Do List</h2>
     <form>
       <input class="inputcss" type="text" id="task" name="task" placeholder="Enter task">
-      <button type="submit" id="submit-task">Submit</button>
+      <button class="buttonStyling" type="submit" id="submit-task">Submit</button>
     </form>
     <div class="todo-list">
       <ul id="todo-ul">
@@ -32,19 +32,21 @@
     <h2>Weather</h2>
     <form class="search-section">
       <input class="inputcss" type="text" id="searchZip" placeholder="Enter Zip-Code">
-      <button id="searchZipButton">Search</button>
+      <button class="buttonStyling" id="searchZipButton">Search</button>
+
     </form>
     <section class="weather_data">
-      <input type="button" value="Popup"
-        onclick="window.open('./weather.html','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
+
     </section>
+    <input type="button" class="buttonStyling" value="More Weather Data"
+      onclick="window.open('./weather.html','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
   </div>
   <div class="news widget">
     <h1>Project Luna</h1>
     <h2 id="newsHeader">News</h2>
     <form class="news-search-section">
       <input class="inputcss" type="text" id="searchNews" placeholder="Enter topic">
-      <button id="searchNewsButton">Search</button>
+      <button class="buttonStyling" id="searchNewsButton">Search</button>
     </form>
     <section class="news_article">
 
@@ -60,8 +62,8 @@
     <h2>Task Timer</h2>
     <form class="timer-input">
       <input class="inputcss" type="text" id="time" placeholder="Enter time in minutes">
-      <button id="timeButton">Start Timer</button>
-      <button id="timeButtonEnd">Clear Timer</button>
+      <button class="buttonStyling" id="timeButton">Start Timer</button>
+      <button class="buttonStyling" id="timeButtonEnd">Clear Timer</button>
     </form>
     <section class="countdown"></section>
   </div>

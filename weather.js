@@ -10,6 +10,7 @@ let charListData;
 let playerList = [];
 let yourCharChoices = document.querySelector('.yourCharChoices');
 let yourOpponentChoices = document.querySelector('.yourOpponentChoices');
+let battle = document.querySelector('.battle');
 
 submitChar.addEventListener('click', (e) => {
   e.preventDefault();
@@ -61,23 +62,56 @@ async function getChars() {
   }
 }
 
+let j = "one";
+
 function listChar(selections, divSelection) {
   console.log(selections);
-  selections.forEach(element => {
+  selections.forEach((element, index) => {
 
-    let charDiv = document.createElement('div');
+    let charDiv = document.createElement('button');
     charDiv.classList.add('charCard');
+    charDiv.setAttribute('id', index);
     let charName = document.createElement('div');
     charName.classList.add('charName');
     let charImg = document.createElement('img');
     charImg.classList.add('charImg');
+
+    charDiv.addEventListener('click', (index) => {
+      console.log(index.target.id);
+      charDiv.classList.add(j);
+      let characterSelect = index.target;
+      battle.appendChild(characterSelect);
+      j = "two";
+    });
+
 
     charName.innerText = element.name;
     charImg.src = element.image;
     charDiv.appendChild(charName);
     charDiv.appendChild(charImg);
     divSelection.appendChild(charDiv);
-
   })
 
 }
+
+let startBattle = document.querySelector('.startBattle');
+let fight = document.querySelector('.battle');
+startBattle.addEventListener('click', () => {
+  fight.style.justifyContent = "center";
+  setTimeout(function () {
+    fight.innerHTML = "";
+    let boom = document.createElement('div');
+    boom.classList.add('boom');
+    fight.appendChild(boom);
+    // fight.style.backgroundImage = 'url(./images/Daco_5777236.png)', 500
+    // fight.style.width = '100px';
+    // fight.style.height = '100px';
+
+  })
+
+});
+
+// function selector(index) {
+//   console.log(index.target.id);
+
+// }

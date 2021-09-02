@@ -4,12 +4,38 @@
   justify-content: space-between;
 }
 
-.charCard {
-width: 30%;
-margin: 10px;
-border-radius: 5px;
-box-shadow: 10px 5px 5px lightgray;
+h1 {
+  color:white;
+  border-radius: 10px;
+  background: rgb(25, 25, 25);
+  padding: 10px;
+  margin: 10px auto;
+  width: 90%;
 }
+
+.charCard {
+width: 25%;
+margin: 10px;
+border-radius: 10px;
+padding: 0;
+outline: none;
+}
+.charCard:hover {
+cursor:grabbing;
+}
+.buttonStyling {
+  border-radius: 10px;
+  padding: 5px;
+  margin: 6px;
+  border: none;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 5px black;}
+
+  .buttonStyling:hover {
+    box-shadow: none;
+      transform: translateY(0px);
+    }
+
 .charName {
   display: flex;
   justify-content: center;
@@ -27,8 +53,70 @@ box-shadow: 10px 5px 5px lightgray;
   border-radius: 0 0 5px 5px;
 }
 
+.rick_morty {
+  background: url(./images/884785.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height:100%;
+}
+
+.startBattle {
+  margin: 0 auto;
+border: none;
+border-radius: 3px;
+transform: translateY(-3px);
+box-shadow: 0 5px 5px black;
+
+}
+
+.startBattle:hover {
+  box-shadow: none;
+    transform: translateY(0px);
+  }
+
+.battle {
+display: flex;
+justify-content: space-between;
+margin: 30px 0;
+height: 200px;
+}
+
+.boom {
+  background: url('./images/Daco_5777236.png');
+  width: 30%;
+  height: 100px;
+}
+
+/* .one {
+  float: left;
+}
+
+.two {
+  float: right;
+} */
+
+.inputcss {
+  border-radius: 5px;
+  background:turquoise;
+}
+
+h3 {
+  color: white;
+  margin: 0;
+}
+
 @media screen and (min-width: 500px) {
   .charCard {
     width: 20%;
+  }
+  .rick_morty {
+    background: url(./images/909641.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
