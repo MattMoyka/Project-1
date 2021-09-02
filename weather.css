@@ -1,0 +1,34 @@
+.yourCharChoices, .yourOpponentChoices {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.charCard {
+width: 30%;
+margin: 10px;
+border-radius: 5px;
+box-shadow: 10px 5px 5px lightgray;
+}
+.charName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  background: black;
+  color: white;
+  padding: 1px;
+  border-radius: 5px 5px 0 0;
+}
+.charImg {
+  width: 100%;
+  height:80%;
+  border-radius: 0 0 5px 5px;
+}
+
+@media screen and (min-width: 500px) {
+  .charCard {
+    width: 20%;
+  }
+}
