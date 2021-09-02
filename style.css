@@ -80,6 +80,12 @@ height: 100px;
   justify-content: center;
   align-items: center;
 }
+.smash {
+grid-area: smash;
+background: lightseagreen;
+padding: 30px;
+}
+
 .timer {
   grid-area: footer-right;
   padding: 10px;
@@ -229,11 +235,12 @@ ul {
     display: grid;
     height: 100%;
     grid-template-columns: 25% auto 25%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 50% 50% 100%;
     gap: 20px;
     grid-template-areas: 
     "header-left main header-right"
-    "footer-left main footer-right";
+    "footer-left main footer-right"
+    "smash smash smash";
   }
 
 }
