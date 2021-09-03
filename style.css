@@ -219,6 +219,10 @@ ul {
   list-style-type: none;
 }
 
+.weather_data {
+  font-size: 10px;
+}
+
 /* Media Query ===================================================== */
 @media screen and (min-width: 800px) {
   .widget {
@@ -243,6 +247,10 @@ ul {
     width: 80%;
   }
   
+.weather_data {
+  font-size: 15px;
+}
+
   .newsTitle {
     width: 98.5%;
     text-align: center;

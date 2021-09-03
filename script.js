@@ -43,7 +43,7 @@ let addItem = () => {
 //==================================================================================
 // weather API
 let zip_code = "";
-let BASE_URL = `http://api.weatherapi.com/v1/forecast.json?key=2d30ac272187439b8e1183146213008&q=${zip_code}&days=1&aqi=no&alerts=no`
+let BASE_URL = `https://api.weatherapi.com/v1/forecast.json?key=2d30ac272187439b8e1183146213008&q=${zip_code}&days=1&aqi=no&alerts=no`
 
 const searchZip = document.querySelector('#searchZip');
 const searchZipButton = document.querySelector('#searchZipButton');
@@ -60,7 +60,7 @@ searchZipButton.addEventListener('click', (event) => {
 })
 
 async function getWeather() {
-  BASE_URL = `http://api.weatherapi.com/v1/forecast.json?key=2d30ac272187439b8e1183146213008&q=${zip_code}&days=1&aqi=no&alerts=no`
+  BASE_URL = `https://api.weatherapi.com/v1/forecast.json?key=2d30ac272187439b8e1183146213008&q=${zip_code}&days=1&aqi=no&alerts=no`
   try {
     let weather = await axios.get(BASE_URL);
     console.log(weather.data);
