@@ -53,7 +53,7 @@ function playGame() {
 
   };
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 1; i++) {
     createDuck()
     counter += 1;
     console.log(counter);
@@ -72,6 +72,6 @@ let checkForWinner = () => {
     alert('You Win!');
   }
 }
-playGame();
+
 // let playGame = document.querySelector('#playGame');
 // playGame.addEventListener('click', playGame());
