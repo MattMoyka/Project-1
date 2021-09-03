@@ -107,7 +107,7 @@ startBattle.addEventListener('click', () => {
     // fight.style.width = '100px';
     // fight.style.height = '100px';
 
-  })
+  }, 1000);
 
 });
 
